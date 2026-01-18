@@ -1,0 +1,16 @@
+# --- Python & System Junk ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+# --- Virtual Environment ---
+venv/
+.venv/
+env/
+
+# --- Sensitive Keys
+.env
+.env.local

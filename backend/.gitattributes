@@ -1,0 +1,4 @@
+backend/Datasets/*.csv filter=lfs diff=lfs merge=lfs -text
+Datasets/*.csv filter=lfs diff=lfs merge=lfs -text
+Models/*.pkl filter=lfs diff=lfs merge=lfs -text
+Models/model_classifier_rf.pkl filter=lfs diff=lfs merge=lfs -text

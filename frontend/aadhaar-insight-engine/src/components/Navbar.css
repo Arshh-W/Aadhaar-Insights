@@ -1,0 +1,137 @@
+:root {
+  --navy-blue: #0a192f;
+  --accent-blue: #3b82f6;
+  --nav-height: 72px; /* Fixed height for reference */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--navy-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.nav-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-box {
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-mini-logo {
+  width: 24px;
+  height: 24px;
+  /* If your logo is dark, this makes it white for the navy bg */
+  filter: brightness(0) invert(1); 
+}
+
+.nav-brand-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.brand-accent {
+  color: var(--accent-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #a0aec0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item.active {
+  color: white;
+  background: var(--accent-blue);
+}
+
+.nav-support-btn {
+  background: transparent;
+  color: #10b981; /* Green status color */
+  border: 1px solid #10b981;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nav-item span, .nav-action { display: none; }
+}
+/* Container for the logo */
+.nav-logo-container {
+  width: 40px;  /* Fixed width */
+  height: 40px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* Subtle box background */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures no spillover */
+}
+
+.nav-mini-logo {
+  /* This is the key: it fits the image inside the 40px box 
+     without cutting it off or distorting it */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  
+  /* Adds padding inside the box so the logo doesn't touch the edges */
+  padding: 4px; 
+
+  /* MAKES THE LOGO VISIBLE: 
+     If your logo is dark/black, this turns it white to match the Navy theme */
+  filter: brightness(0) invert(1); 
+  
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the logo */
+.nav-logo-section:hover .nav-mini-logo {
+  transform: scale(1.1);
+}

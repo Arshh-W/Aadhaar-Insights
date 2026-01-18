@@ -1,0 +1,14 @@
+{
+  "infiltration_index": "infiltration_index",
+  "birth_index": "birth_index",
+  "correction_index": "correction_index",
+  "labor_intensity_score": "labor_intensity_score",
+  "mobility_index": "mobility_index",
+  "child_compliance_ratio": "child_compliance_ratio",
+  "target_trend": "total_enrolment",
+  "total_enrolment": "total_enrolment",
+  "is_weekend": "is_weekend",
+  "date": "date",
+  "state": "state",
+  "district": "district"
+}

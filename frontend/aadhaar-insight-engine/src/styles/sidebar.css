@@ -1,0 +1,100 @@
+/* ===========================
+   SIDEBAR LAYOUT
+=========================== */
+.sidebar {
+  width: 240px;
+  background: #99cdda;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eee;
+}
+
+/* Divider */
+.hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-top: 1px solid #eee;
+  background-color: grey;
+}
+
+/* LOGO SECTION */
+.sidebar-logo h2 {
+  margin: 0;
+}
+
+.sidebar-logo span {
+  font-size: 12px;
+  color: #777;
+}
+
+/* MENU */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* Menu Item */
+.sidebar-menu div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #363695;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;  /* Prevent text wrap */
+  transition: all 0.2s ease;
+}
+
+/* Wrap text in span for safety */
+.sidebar-menu div span {
+  flex: 1;
+}
+
+/* Hover effect */
+.sidebar-menu div:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+/* Active item */
+.sidebar-menu .active {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding-left: 12px; /* Adjust for visual border effect */
+}
+
+/* Disabled item */
+.sidebar-menu .disabled {
+  cursor: pointer;
+}
+
+.sidebar-menu .disabled:hover {
+  background: none;
+  color: #363695;
+}
+
+/* FOOTER */
+.sidebar-footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.avatar {
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
